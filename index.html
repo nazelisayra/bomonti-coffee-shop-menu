@@ -17,172 +17,179 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
-
   <body>
-    <!-- Your menu section goes here -->
-    <section aria-labelledby="menu-title">
-      <header>
-        <h1 id="menu-title">Bomonti Coffee Shop Menu</h1>
-        <p>Classic NYC favorites + a few cult brand collabs.</p>
-      </header>
+    <main>
+      <section aria-labelledby="menu-title">
+        <header>
+          <h1 id="menu-title">Bomonti Coffee Shop Menu</h1>
+          <p>Classic NYC favorites + a few cult brand collabs.</p>
+        </header>
 
-      <!-- ...rest of your menu HTML... -->
-    </section>
+        <!-- Cover image (same visual placement as before, but clean semantics) -->
+        <figure class="menu-cover">
+          <img
+            src="./images/main-logo.png"
+            alt="Bomonti Coffee Shop menu cover illustration"
+            width="300"
+            height="300"
+            loading="eager"
+          />
+        </figure>
+
+        <ul class="menu" role="list">
+          <!-- 1 -->
+          <li class="menu-item">
+            <article aria-labelledby="item-1-title">
+              <img
+                src="./images/oat-cortado.png"
+                alt="Blue Bottle x The New Yorker Oat Cortado"
+                width="300"
+                height="300"
+                loading="lazy"
+              />
+              <div class="menu-item__content">
+                <h2 id="item-1-title">Blue Bottle x “New Yorker” Oat Cortado</h2>
+                <p>Velvety oat cortado, bright espresso, tiny cup—big attitude.</p>
+                <p class="price" aria-label="Price">$5.75</p>
+                <p class="diet" aria-label="Dairy free">Dairy-free: Yes</p>
+              </div>
+            </article>
+          </li>
+
+          <!-- 2 -->
+          <li class="menu-item">
+            <article aria-labelledby="item-2-title">
+              <img
+                src="./images/flat-white.png"
+                alt="Stumptown Flatiron Flat White"
+                width="300"
+                height="300"
+                loading="lazy"
+              />
+              <div class="menu-item__content">
+                <h2 id="item-2-title">Stumptown “Flatiron” Flat White</h2>
+                <p>Ristretto-forward espresso, silky microfoam, built for quick subway sips.</p>
+                <p class="price" aria-label="Price">$6.25</p>
+                <p class="diet" aria-label="Dairy free">Dairy-free: No</p>
+              </div>
+            </article>
+          </li>
+
+          <!-- 3 -->
+          <li class="menu-item">
+            <article aria-labelledby="item-3-title">
+              <img
+                src="./images/columbia.png"
+                alt="Intelligentsia Colombia Pour-Over"
+                width="300"
+                height="300"
+                loading="lazy"
+              />
+              <div class="menu-item__content">
+                <h2 id="item-3-title">Intelligentsia Colombia Pour-Over</h2>
+                <p>Citrus and caramel notes, precise pour-over, clean finish.</p>
+                <p class="price" aria-label="Price">$6.50</p>
+                <p class="diet" aria-label="Dairy free">Dairy-free: Yes</p>
+              </div>
+            </article>
+          </li>
+
+          <!-- 4 -->
+          <li class="menu-item">
+            <article aria-labelledby="item-4-title">
+              <img
+                src="./images/draft-latte.png"
+                alt="La Colombe Draft Latte"
+                width="300"
+                height="300"
+                loading="lazy"
+              />
+              <div class="menu-item__content">
+                <h2 id="item-4-title">La Colombe Draft Latte</h2>
+                <p>Frothy, cold, lightly sweet, café-latte-in-a-can energy.</p>
+                <p class="price" aria-label="Price">$5.95</p>
+                <p class="diet" aria-label="Dairy free">Dairy-free: No</p>
+              </div>
+            </article>
+          </li>
+
+          <!-- 5 -->
+          <li class="menu-item">
+            <article aria-labelledby="item-5-title">
+              <img
+                src="./images/espresso-tonic.png"
+                alt="Espresso Tonic"
+                width="300"
+                height="300"
+                loading="lazy"
+              />
+              <div class="menu-item__content">
+                <h2 id="item-5-title">Espresso Tonic (NYC Summer)</h2>
+                <p>Bright espresso over tonic, citrus twist, crisp and electric.</p>
+                <p class="price" aria-label="Price">$6.75</p>
+                <p class="diet" aria-label="Dairy free">Dairy-free: Yes</p>
+              </div>
+            </article>
+          </li>
+
+          <!-- 6 -->
+          <li class="menu-item">
+            <article aria-labelledby="item-6-title">
+              <img
+                src="./images/oatly-latte.png"
+                alt="Oatly Iced Latte"
+                width="300"
+                height="300"
+                loading="lazy"
+              />
+              <div class="menu-item__content">
+                <h2 id="item-6-title">Oatly Iced Latte</h2>
+                <p>Oat milk latte, smooth sweetness, strong espresso backbone.</p>
+                <p class="price" aria-label="Price">$6.25</p>
+                <p class="diet" aria-label="Dairy free">Dairy-free: Yes</p>
+              </div>
+            </article>
+          </li>
+
+          <!-- 7 -->
+          <li class="menu-item">
+            <article aria-labelledby="item-7-title">
+              <img
+                src="./images/califia-latte.png"
+                alt="Califia Farms Almond Cold Brew"
+                width="300"
+                height="300"
+                loading="lazy"
+              />
+              <div class="menu-item__content">
+                <h2 id="item-7-title">Califia Farms Almond Cold Brew</h2>
+                <p>Bold cold brew, almondmilk lift, low sugar, ultra drinkable.</p>
+                <p class="price" aria-label="Price">$5.50</p>
+                <p class="diet" aria-label="Dairy free">Dairy-free: Yes</p>
+              </div>
+            </article>
+          </li>
+
+          <!-- 8 -->
+          <li class="menu-item">
+            <article aria-labelledby="item-8-title">
+              <img
+                src="./images/brooklyn-mocha.png"
+                alt="Brooklyn Brownstone Mocha"
+                width="300"
+                height="300"
+                loading="lazy"
+              />
+              <div class="menu-item__content">
+                <h2 id="item-8-title">Brooklyn “Brownstone” Mocha</h2>
+                <p>Dark chocolate, double espresso, steamed milk, not-too-sweet finish.</p>
+                <p class="price" aria-label="Price">$6.95</p>
+                <p class="diet" aria-label="Dairy free">Dairy-free: No</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>
-
-
-  <ul class="menu" role="list">
-    <!-- 1 -->
-    <li class="menu-item">
-      <article aria-labelledby="item-1-title">
-        <img
-          src="images/main-logo.png"
-          alt="Blue Bottle–style New Yorker espresso drink"
-          width="300"
-          height="300"
-          loading="lazy"
-        />
-        <div class="menu-item__content">
-          <h2 id="item-1-title">Blue Bottle x “New Yorker” Oat Cortado</h2>
-          <p>Velvety oat cortado, bright espresso, tiny cup—big attitude.</p>
-          <p class="price" aria-label="Price">$5.75</p>
-          <p class="diet" aria-label="Dairy free">Dairy-free: Yes</p>
-        </div>
-      </article>
-    </li>
-
-    <!-- 2 -->
-    <li class="menu-item">
-      <article aria-labelledby="item-2-title">
-        <img
-          src="images/oat-cortado.png"
-          alt="Stumptown-style flat white"
-          width="300"
-          height="300"
-          loading="lazy"
-        />
-        <div class="menu-item__content">
-          <h2 id="item-2-title">Stumptown “Flatiron” Flat White</h2>
-          <p>Ristretto-forward espresso, silky microfoam, built for quick subway sips.</p>
-          <p class="price" aria-label="Price">$6.25</p>
-          <p class="diet" aria-label="Dairy free">Dairy-free: No</p>
-        </div>
-      </article>
-    </li>
-
-    <!-- 3 -->
-    <li class="menu-item">
-      <article aria-labelledby="item-3-title">
-        <img
-          src="images/flat-white.png"
-          alt="Intelligentsia pour-over coffee"
-          width="300"
-          height="300"
-          loading="lazy"
-        />
-        <div class="menu-item__content">
-          <h2 id="item-3-title">Intelligentsia Colombia Pour-Over</h2>
-          <p>Citrus and caramel notes, precise pour-over, clean finish.</p>
-          <p class="price" aria-label="Price">$6.50</p>
-          <p class="diet" aria-label="Dairy free">Dairy-free: Yes</p>
-        </div>
-      </article>
-    </li>
-
-    <!-- 4 -->
-    <li class="menu-item">
-      <article aria-labelledby="item-4-title">
-        <img
-          src="images/columbia.png"
-          alt="La Colombe draft latte"
-          width="300"
-          height="300"
-          loading="lazy"
-        />
-        <div class="menu-item__content">
-          <h2 id="item-4-title">La Colombe Draft Latte</h2>
-          <p>Frothy, cold, lightly sweet, café-latte-in-a-can energy.</p>
-          <p class="price" aria-label="Price">$5.95</p>
-          <p class="diet" aria-label="Dairy free">Dairy-free: No</p>
-        </div>
-      </article>
-    </li>
-
-    <!-- 5 -->
-    <li class="menu-item">
-      <article aria-labelledby="item-5-title">
-        <img
-          src="images/draft-latte.png"
-          alt="Espresso tonic coffee drink"
-          width="300"
-          height="300"
-          loading="lazy"
-        />
-        <div class="menu-item__content">
-          <h2 id="item-5-title">Espresso Tonic (NYC Summer)</h2>
-          <p>Bright espresso over tonic, citrus twist, crisp and electric.</p>
-          <p class="price" aria-label="Price">$6.75</p>
-          <p class="diet" aria-label="Dairy free">Dairy-free: Yes</p>
-        </div>
-      </article>
-    </li>
-
-    <!-- 6 -->
-    <li class="menu-item">
-      <article aria-labelledby="item-6-title">
-        <img
-          src="images/espresso-tonic.png"
-          alt="Oatly iced latte"
-          width="300"
-          height="300"
-          loading="lazy"
-        />
-        <div class="menu-item__content">
-          <h2 id="item-6-title">Oatly Iced Latte</h2>
-          <p>Oat milk latte, smooth sweetness, strong espresso backbone.</p>
-          <p class="price" aria-label="Price">$6.25</p>
-          <p class="diet" aria-label="Dairy free">Dairy-free: Yes</p>
-        </div>
-      </article>
-    </li>
-
-    <!-- 7 -->
-    <li class="menu-item">
-      <article aria-labelledby="item-7-title">
-        <img
-          src="images/oatly-latte.png"
-          alt="Califia Farms cold brew with almondmilk"
-          width="300"
-          height="300"
-          loading="lazy"
-        />
-        <div class="menu-item__content">
-          <h2 id="item-7-title">Califia Farms Almond Cold Brew</h2>
-          <p>Bold cold brew, almondmilk lift, low sugar, ultra drinkable.</p>
-          <p class="price" aria-label="Price">$5.50</p>
-          <p class="diet" aria-label="Dairy free">Dairy-free: Yes</p>
-        </div>
-      </article>
-    </li>
-
-    <!-- 8 -->
-    <li class="menu-item">
-      <article aria-labelledby="item-8-title">
-        <img
-          src="images/califia-latte.png"
-          alt="Brooklyn-style mocha"
-          width="300"
-          height="300"
-          loading="lazy"
-        />
-        <div class="menu-item__content">
-          <h2 id="item-8-title">Brooklyn “Brownstone” Mocha</h2>
-          <p>Dark chocolate, double espresso, steamed milk, not-too-sweet finish.</p>
-          <p class="price" aria-label="Price">$6.95</p>
-          <p class="diet" aria-label="Dairy free">Dairy-free: No</p>
-        </div>
-      </article>
-    </li>
-  </ul>
-</section>
