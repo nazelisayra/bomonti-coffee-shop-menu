@@ -1,27 +1,6 @@
-html, body {
-  background-color: #FEFCFC;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-/* Body text */
-p {
-  font-family: "Spectral", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Cal Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 /* ---------- Base ---------- */
-html, body {
+html,
+body {
   background-color: #FEFCFC;
   margin: 0;
   padding: 0;
@@ -30,17 +9,27 @@ html, body {
 body {
   font-family: "Spectral", serif;
   font-weight: 400;
+  font-style: normal;
   line-height: 1.6;
 }
 
-h1, h2 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Cal Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: 400;
+  font-style: normal;
   margin: 0;
 }
 
 p {
   margin: 0;
+  font-family: "Spectral", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Page spacing */
@@ -60,9 +49,10 @@ header p {
 }
 
 .menu-cover img {
-  width: 300px;
-  height: 300px;
   display: block;
+  width: min(300px, 100%);
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 14px;
 }
@@ -78,8 +68,7 @@ header p {
   margin: 28px 0;
 }
 
-/* Each menu item layout:
-   title/desc -> image -> meta */
+/* Each menu item layout: title/desc -> image -> meta */
 .menu-item article {
   display: grid;
   gap: 10px;
@@ -95,41 +84,51 @@ header p {
   opacity: 0.9;
 }
 
-/* Image */
+/* Image (always sync width with meta) */
 .menu-item img {
-  width: 300px;
-  height: 300px;
+  display: block;
+  width: min(300px, 100%);
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 14px;
-  display: block;
   margin-top: 8px;
 }
 
-/* ---------- Price + Diet as one line ---------- */
-.menu-item .price,
-.menu-item .diet {
-  display: inline;
+/* ---------- Price (left) + Diet (right) ---------- */
+.menu-item .meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 10px;
+  width: min(300px, 100%); /* matches image width */
+  flex-wrap: nowrap;       /* prevents stacking */
+}
+
+.menu-item .meta .price,
+.menu-item .meta .diet {
+  margin: 0;
   font-family: "Cal Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-size: 14px;
-  letter-spacing: 0.2px;
 }
 
-/* Add bullet between price and diet */
-.menu-item .price::after {
-  content: " • ";
+/* Price left */
+.menu-item .meta .price {
+  font-weight: 600;
 }
 
-/* Optional: make the whole meta line a bit lighter */
-.menu-item .diet {
+/* Diet right */
+.menu-item .meta .diet {
   opacity: 0.85;
+  text-align: right;
+  margin-left: auto;   /* pushes to far right */
+  white-space: nowrap; /* keeps it on one line */
 }
 
-/* ---------- Responsive (mobile) ---------- */
+/* Mobile: images already scale; meta follows automatically */
 @media (max-width: 420px) {
-  .menu-cover img,
-  .menu-item img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
+  main {
+    padding: 20px 16px 48px;
   }
 }
