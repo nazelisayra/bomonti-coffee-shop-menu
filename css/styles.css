@@ -43,6 +43,19 @@ header p {
   margin-top: 8px;
 }
 
+/* Center header content on larger screens and keep mobile spacing */
+header {
+  text-align: center;
+  display: block;
+}
+
+.menu-cover {
+  margin: 16px 0 28px;
+  display: flex;
+  justify-content: center; /* center the cover image horizontally */
+  align-items: center;
+}
+
 /* ---------- Cover ---------- */
 .menu-cover {
   margin: 16px 0 28px;
@@ -130,5 +143,54 @@ header p {
 @media (max-width: 420px) {
   main {
     padding: 20px 16px 48px;
+  }
+}
+
+/* Desktop: 3x3 grid and modern card styles (mobile unchanged) */
+@media (min-width: 800px) {
+  main {
+    max-width: 1100px;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 20px;
+    align-items: start;
+  }
+
+  .menu-item {
+    margin: 0; /* spacing comes from grid gap */
+  }
+
+  .menu-item article {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(20, 20, 20, 0.06);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+    display: grid;
+    gap: 12px;
+    min-height: 100%;
+  }
+
+  .menu-item article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(20, 20, 20, 0.10);
+  }
+
+  /* Images expand to card width on wider layouts */
+  .menu-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    margin-top: 0;
+    border-radius: 10px;
+  }
+
+  /* Make meta span full width inside the card */
+  .menu-item .meta {
+    width: 100%;
+    margin-top: 8px;
   }
 }
